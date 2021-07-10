@@ -1422,7 +1422,7 @@ import {
     
     return svg`
     <g @click=${e => this.handlePopup(e, this.entities[item.entity_index])}>
-      <foreignObject width="4em" height="${iconSize}em" x="${xpx}" y="${ypx}">
+      <foreignObject width="4em" height="4em" x="${xpx}" y="${ypx}">
         <body>
           <div class="icon">
             <ha-icon .icon=${icon} style="line-height:${iconSize}em;--mdc-icon-size:4em;width:100%; height:100%;align-self:center;${configStyleStr}";></ha-icon>
