@@ -1376,8 +1376,8 @@ import {
     
     var iconSize = item.icon_size ? item.icon_size : 2;
     var iconPixels = iconSize * FONT_SIZE;
-    const x = item.xpos ? item.xpos / 100 : 0.5;
-    const y = item.ypos ? item.ypos / 100 : 0.5;
+    const x = item.xpos; //? item.xpos / 100 : 0.5;
+    const y = item.ypos; //? item.ypos / 100 : 0.5;
     
     const align = item.align ? item.align : 'center';
     const adjust = (align == 'center' ? 0.5 : (align == 'start' ? -1 : +1));
@@ -1422,7 +1422,7 @@ import {
     
     return svg`
     <g @click=${e => this.handlePopup(e, this.entities[item.entity_index])}>
-      <foreignObject width="${iconSize}em" height="${iconSize}em" x="${xpx}%" y="${ypx}%">
+      <foreignObject width="${iconSize}em" height="${iconSize}em" x="${x}" y="${y}">
         <body>
           <div class="icon">
             <ha-icon .icon=${icon} style="line-height:${iconSize}em;--mdc-icon-size:${iconSize}em;width:100%; height:100%;align-self:center;${configStyleStr}";></ha-icon>
